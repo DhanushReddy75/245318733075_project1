@@ -2,9 +2,9 @@
   "name": "project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "micro.js",
   "scripts": {
-    "start": "nodemon micro.js"
+    "start": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
