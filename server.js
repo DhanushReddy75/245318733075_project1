@@ -10,7 +10,7 @@ class HandlerGenerator {
         let username = req.body.username;
         let password = req.body.password;
         // to fetch from db
-        let mockedUsername = 'admin';
+        let mockedUsername = '18733075';
         let mockedPassword = 'password';
 
         if (username && password) {
@@ -52,7 +52,7 @@ class HandlerGenerator {
 function main () {
     let app = express();
     let handlers = new HandlerGenerator();
-    const port = 100;
+    const port = 101;
     app.use(bodyParser.urlencoded({ //middleware
         extended:true
     }));
