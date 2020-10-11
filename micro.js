@@ -39,7 +39,7 @@ app.get('/ventilator', middleware.checkToken , (req,res)=>{
 app.post('/searchventbystatus', middleware.checkToken , (req,res) => {
     const status = req.query.status;
     console.log(status);
-    const ventilatordetails=db.collection('ventilator')
+    const ventilatordetails=db.collection('ventilators')
     .find({"status":status}).toArray().then(result=>res.json(result));
 });
 
@@ -48,7 +48,7 @@ app.post('/searchventbystatus', middleware.checkToken , (req,res) => {
 app.post('/searchventbyname',  middleware.checkToken , (req,res) => {
     const name=req.query.name;
     console.log(name);
-    const ventilatordeatils=db.collection('ventilator')
+    const ventilatordeatils=db.collection('ventilators')
     .find({'name':new RegExp(name, 'i')}).toArray().then(result=>res.json(result));
 });
 
