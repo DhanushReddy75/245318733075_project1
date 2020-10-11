@@ -75,7 +75,7 @@ app.post('/addvent', middleware.checkToken ,(req,res)=>{
 
 //UPDATE VENTILATOR BY VENTILATOR ID
 app.put('/updateventilator',  middleware.checkToken ,(req,res) => {
-    const ventilatorId= {ventilatorId: req.query.ventid};
+    const ventilatorId= {ventilatorId: req.query.ventilatorId};
     console.log(ventilatorId);
     const newvalues={$set: {status:req.query.status}};
     console.log("updating ventilator details, please wait a moment");
