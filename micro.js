@@ -79,8 +79,8 @@ app.put('/updateventilator',  middleware.checkToken ,(req,res) => {
     console.log(ventilatorId);
     const newvalues={$set: {status:req.query.status}};
     console.log("updating ventilator details, please wait a moment");
-    db.collection("ventilators").updateOne(ventid, newvalues, function(err, result){
-        res.json('updated one document');
+    db.collection("ventilators").updateOne(ventilatorId, newvalues, function(err, result){
+        res.json('updated successfully');
         if(err) throw err;
     });
 });
